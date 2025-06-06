@@ -1,122 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EtherGrid Sovereign Mining Hub</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e;
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
-    header, nav {
-      background: #121212;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav a {
-      color: #00ffcc;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .ticker-container {
-      display: flex;
-      justify-content: space-around;
-      background: #1a1a1a;
-      padding: 1rem;
-      border-top: 1px solid #333;
-      border-bottom: 1px solid #333;
-    }
-    .ticker {
-      text-align: center;
-    }
-    .glow {
-      color: #00ffcc;
-      text-shadow: 0 0 10px #00ffcc;
-    }
-    .section {
-      padding: 2rem;
-    }
-    .wallet-box {
-      background: #141414;
-      border: 1px solid #333;
-      padding: 1rem;
-      margin: 2rem auto;
-      width: 90%;
-      max-width: 700px;
-      border-radius: 8px;
-    }
-    h2, h3 {
-      color: #00ffff;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1 class="glow">🌐 EtherGrid Sovereign Mining Hub</h1>
-    <nav>
-      <a href="/sovereign-dashboard.html">Sovereign Dashboard</a>
-      <a href="/token-generator.html">Token Generator</a>
-      <a href="/hydrogrid-registry.html">HydroGrid Registry</a>
-    </nav>
-  </header>
-
-  <div class="ticker-container">
-    <div class="ticker"><strong>BTC:</strong> <span id="btc-price">...</span></div>
-    <div class="ticker"><strong>ETH:</strong> <span id="eth-price">...</span></div>
-    <div class="ticker"><strong>DOGE:</strong> <span id="doge-price">...</span></div>
-    <div class="ticker"><strong>XRP:</strong> <span id="xrp-price">...</span></div>
-    <div class="ticker"><strong>SHIBA:</strong> <span id="shiba-price">...</span></div>
-  </div>
-
-  <section class="section">
-    <h2>💎 Sovereign Decree</h2>
-    <p><em>By the sound of my voice, and under Divine Law, Natural Law, and Common Law, this sovereign decree is now in effect. I, Carmelo, declare the EtherGrid sovereign, irrevocable, and divine. This network mines truth, justice, and law into the Quantum Grid of humanity. All wealth mined is for restoration, reparations, and resurrection of Divine Order.</em></p>
-
-    <h2>📜 United States Constitution (Organic 1776 Version)</h2>
-    <p>“We the People of the United States, in order to form a more perfect Union…”<br/>[Insert full Constitution or link to PDF if too long]</p>
-
-    <div class="wallet-box">
-      <h3>💰 Live Wallet Mining Stats</h3>
-      <p>Total Value Mined Since Launch: <strong><span id="mined-total">$...</span></strong></p>
-      <p>Current Mining Rate: <strong><span id="mining-rate">...</span>/sec</strong></p>
-      <p>Wallet Balance (Live): <strong class="glow"><span id="wallet-balance">$...</span></strong></p>
-      <p>Lifecoin Value (MONEY): <strong>1,000 total coins</strong> | Value: <span id="lifecoin-value">$...</span> each</p>
-    </div>
-  </section>
-
-  <script>
-    async function updateTickers() {
-      try {
-        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,dogecoin,ripple,shiba-inu&vs_currencies=usd');
-        const data = await res.json();
-        document.getElementById('btc-price').textContent = `$${data.bitcoin.usd}`;
-        document.getElementById('eth-price').textContent = `$${data.ethereum.usd}`;
-        document.getElementById('doge-price').textContent = `$${data.dogecoin.usd}`;
-        document.getElementById('xrp-price').textContent = `$${data.ripple.usd}`;
-        document.getElementById('shiba-price').textContent = `$${data['shiba-inu'].usd}`;
-
-        // Simulate mined total
-        const mined = (3720000000000 + Date.now() % 10000000).toLocaleString();
-        const miningRate = (4500000).toLocaleString();
-        const wallet = (3720000000000 + Date.now() % 99999999).toLocaleString();
-        const lifecoin = (wallet / 1000).toFixed(2).toLocaleString();
-
-        document.getElementById('mined-total').textContent = `$${mined}`;
-        document.getElementById('mining-rate').textContent = `$${miningRate}`;
-        document.getElementById('wallet-balance').textContent = `$${wallet}`;
-        document.getElementById('lifecoin-value').textContent = `$${lifecoin}`;
-      } catch (err) {
-        console.error("Ticker error:", err);
-      }
-    }
-
-    setInterval(updateTickers, 3000); // every 3 seconds
-    updateTickers();
-  </script>
-</body>
-</html>
+<!-- Sovereign Public Takeover Notice -->
+<section id="global-sovereign-decree" style="background:#000; color:#0f0; padding:2rem; font-family:monospace; border-top:4px solid #0f0;">
+  <h2 style="font-size:1.8rem;">📜 Sovereign Takeover Decree</h2>
+  <p>
+    This public record portal is not just a site — it is an autonomous, living constitutional grid backed by <strong>Sovereign Trust Law</strong>,
+    <strong>Common Law</strong>, <strong>Natural Law</strong>, <strong>Universal Law</strong>, and the <strong>Divine Authority of the Living God</strong>.
+  </p>
+  <p>
+    As of <strong>June 06, 2025 at 02:10 PM</strong>, this EtherGrid dissolves all false structures — including corrupted banking systems, hedge funds, private black markets,
+    and unauthorized stock exchanges — and secures the global financial, digital, military, and spiritual infrastructure under the <strong>Tartarian Kingdom</strong>,
+    <strong>DivineGridNetwork.com</strong>, and <strong>DivineGridNetwork.store</strong>.
+  </p>
+  <p>
+    Every government database, server, and crypto protocol is hereby absorbed into this grid via quantum override, for the protection of mankind and direct restoration
+    to <strong>President Donald J. Trump</strong>, the rightful executor of the free world under Tartarian governance.
+  </p>
+  <p>
+    All agencies (.gov, .org, .net, .com, .is, .int, .ai, .eth, and beyond) are hereby governed by Tartarian Sovereignty. Anyone seeking commercial re-entry must be licensed
+    through the Tartarian Licensing Grid, registered, taxed, and bonded through this living ledger.
+  </p>
+  <p>
+    This EtherGrid functions as a secure firewall, economic reset protocol, sovereign trust repository, and governance compass, minting truth and justice in every transaction.
+    No man, machine, or corporation escapes sovereign law. It is done. It is so.
+  </p>
+  <p style="margin-top:2rem; font-weight:bold; font-size:1.3rem;">
+    — ✠ Decreed by Carmelo Etienne, The Living King, Guardian of the Ether, Architect of the Divine Grid
+  </p>
+</section>
