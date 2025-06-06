@@ -1,78 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Devine Grid Network</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="app.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #1B3A4B;
+    }
+    header {
+      background-color: #1B3A4B;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #00C853;
+      display: flex;
+      justify-content: space-around;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .wallet {
+      text-align: center;
+      padding: 2rem;
+      background: #fff;
+      margin: 1rem;
+      border-radius: 8px;
+    }
+    .ticker {
+      display: flex;
+      justify-content: space-around;
+      background: #111;
+      color: #0f0;
+      padding: 1rem;
+      font-family: monospace;
+    }
+    .section {
+      background: #fff;
+      margin: 1rem;
+      padding: 2rem;
+      border-radius: 8px;
+    }
+    .admin-login {
+      display: none; /* Hidden unless accessed by dropdown or future JS unlock */
+    }
+    footer {
+      text-align: center;
+      background: #1B3A4B;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+  <script>
+    let walletValue = 10000000000000; // Initial 10 trillion
+    setInterval(() => {
+      walletValue += Math.floor(Math.random() * 100000000); // simulate growth
+      document.getElementById("walletValue").innerText = walletValue.toLocaleString();
+    }, 5000);
+  </script>
 </head>
 <body>
+
   <header>
-    <h1>DEVINE GRID NETWORK</h1>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Public Wallet</li>
-        <li>Ledgers</li>
-        <li>Tickers</li>
-        <li>Golden Pass</li>
-        <li>Constitution</li>
-        <li>Public Liens</li>
-        <li class="admin-access">Admin (Secure)</li>
-      </ul>
-    </nav>
+    <h1>Devine Grid Network</h1>
+    <p>Public Treasury Wallet • 5-Second Updates</p>
   </header>
 
-  <main>
-    <section id="wallet">
-      <h2>Wallet Overview</h2>
-      <p>Public Wallet Value: $10,000,000,000,000+</p>
-      <p>Mining Wallet: $3,900,000,000,000,000+</p>
-      <p>Update Rate: Every 5 seconds</p>
-    </section>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Public Records</a>
+    <a href="#">Constitutions</a>
+    <a href="#">Golden Pass</a>
+    <a href="#">Contact</a>
+  </nav>
 
-    <section id="tickers">
-      <h2>Real-Time Market Tickers</h2>
-      <div id="ticker-container">
-        <!-- Real-time tickers loaded via JS -->
-      </div>
-    </section>
+  <div class="wallet">
+    <h2>Live Wallet Value</h2>
+    <h3>$<span id="walletValue">10,000,000,000,000</span></h3>
+    <p>Reflecting 5-sec cycle from voice mining + lien enforcement + debt recovery.</p>
+  </div>
 
-    <section id="golden-pass">
-      <h2>Golden Pass Crowdfunding</h2>
-      <p>Buy a share for $5,000 and ride for life.</p>
-      <p>Total Shares: 500 million | Shares Remaining: 300 million</p>
-      <p>You Own: 200 million ($1 Trillion USD)</p>
-      <button id="donate">Donate / Purchase Share</button>
-    </section>
+  <div class="ticker">
+    <div>BTC: $68,000</div>
+    <div>ETH: $3,800</div>
+    <div>XAU: $2,340</div>
+    <div>USD/TARTARIA: 1 = 1.618</div>
+  </div>
 
-    <section id="constitutions">
-      <h2>Constitutions & Governance</h2>
-      <article>
-        <h3>Tartarian Constitution</h3>
-        <p>...Full constitution text here...</p>
-      </article>
-      <article>
-        <h3>1776 Organic Constitution</h3>
-        <p>...Full constitution text here...</p>
-      </article>
-      <article>
-        <h3>Kingdom of God Constitution</h3>
-        <p>...Full constitution text here...</p>
-      </article>
-    </section>
+  <div class="section">
+    <h2>Golden Pass Crowdfunding</h2>
+    <p>Buy a share for $5,000 and receive lifetime transportation, yacht parties, and elite travel. You are investing in the future of mobility. Current Available Shares: <strong>300,000,000</strong></p>
+    <button onclick="alert('Connect Stripe to receive payment.')">Buy a Share</button>
+  </div>
 
-    <section id="liens">
-      <h2>Global Liens & Notices</h2>
-      <p>United States Leaned: $900 Trillion Decitrillion</p>
-      <p>State of Florida: $1,000 Trillion</p>
-      <p>Each State: $10 Trillion lien active</p>
-    </section>
-  </main>
+  <div class="section">
+    <h2>Public Constitutional Archives</h2>
+    <p>This section contains:</p>
+    <ul>
+      <li>Kingdom of God Constitution</li>
+      <li>United States Organic Constitution (1776)</li>
+      <li>Tartaria Constitution & Tartaria Maxim Laws</li>
+    </ul>
+    <p>[Full documents embedded here in future update — suggest iframe or markdown converter for loading docs]</p>
+  </div>
+
+  <div class="section admin-login">
+    <h2>Admin Panel (Private)</h2>
+    <p>Username: Carmelo</p>
+    <p>Password: MellowBaronAI</p>
+    <p>Stripe + crypto wallet config here for payout.</p>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Devine Grid Network | All Rights Reserved | Powered by Sovereign Technologies</p>
+    <p>&copy; 2025 Devine Grid Network • All rights reserved • Sovereign Technologies • Kingdom of Tartaria</p>
   </footer>
+
 </body>
 </html>
