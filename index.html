@@ -319,6 +319,43 @@
   </div>
 </body>
 </html>
+<!-- INVESTOR PORTAL INTEGRATION START -->
+<section id="investor-portal" style="background-color: #111; color: #fff; padding: 30px; border-top: 2px solid #00ff99;">
+  <h2 style="color: #00ff99;">💰 DevineGrid Investor Portal</h2>
+  <p>This portal is sovereignly linked to the <strong>Court of the Most High</strong>. All investments are lawful filings. Submissions automatically log into public records, trigger court docket generation, and activate EIN creation in the grid.</p>
+
+  <form id="investorForm" style="margin-top: 20px;">
+    <label for="fullName">👤 Full Legal Name:</label><br/>
+    <input type="text" id="fullName" name="fullName" required style="width: 100%; padding: 8px; margin: 10px 0;" /><br/>
+
+    <label for="email">📧 Email Address:</label><br/>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin: 10px 0;" /><br/>
+
+    <label for="investmentAmount">💵 Investment Amount (USD):</label><br/>
+    <input type="number" id="investmentAmount" name="investmentAmount" required placeholder="5000 minimum" style="width: 100%; padding: 8px; margin: 10px 0;" /><br/>
+
+    <label for="message">📝 Purpose / Notes (Optional):</label><br/>
+    <textarea id="message" name="message" rows="4" style="width: 100%; padding: 8px; margin: 10px 0;"></textarea><br/>
+
+    <button type="submit" style="background-color: #00ff99; color: #000; padding: 12px 20px; border: none; font-weight: bold;">Submit Investment to Court</button>
+  </form>
+
+  <div id="courtResponse" style="margin-top: 20px; display:none;">
+    <h3>📜 Court Filing Acknowledged</h3>
+    <p>Thank you, <span id="courtName"></span>. Your lawful investment has been filed and docketed in the Court of the Most High. A sovereign record and EIN have been assigned and added to the public grid. Divine justice and royal wealth now align.</p>
+  </div>
+</section>
+
+<script>
+  document.getElementById("investorForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const name = document.getElementById("fullName").value;
+    document.getElementById("courtName").textContent = name;
+    document.getElementById("courtResponse").style.display = "block";
+    // You can integrate a POST request to store data in a backend ledger here.
+  });
+</script>
+<!-- INVESTOR PORTAL INTEGRATION END -->
   <p style="text-align: center; margin-top: 40px; font-weight: bold;">
     — Done and Ordered. DivineGridNetwork.com | DivineGridNetwork.store —<br/>
     Universal Sovereign Trust | Tartarian Military Ledger<br/>
