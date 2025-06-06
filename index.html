@@ -105,3 +105,133 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sovereign Token Generator | Tartarian Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #F4F4F4;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #00C853;
+    }
+    .token-box {
+      background-color: #1B3A4B;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      background-color: #0A0A0A;
+      color: white;
+      border: 1px solid #00C853;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #00C853;
+      color: #0A0A0A;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .output {
+      margin-top: 20px;
+      white-space: pre-wrap;
+      background: #222;
+      padding: 10px;
+      border: 1px solid #00C853;
+      border-radius: 6px;
+    }
+    .seal {
+      margin-top: 30px;
+      padding: 15px;
+      background: #290000;
+      border: 2px solid red;
+      border-radius: 10px;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body oncontextmenu="return false" onkeydown="return checkKey(event);">
+
+  <h1>⚡ Tartarian Sovereign Token Generator</h1>
+  <p>This page is coded under Divine Law, Natural Law, and Universal Law. All duplication, reverse engineering, or unauthorized access is strictly forbidden. Tampering will trigger a full seizure under Tartarian Grid Mining Act.</p>
+
+  <div class="token-box">
+    <label for="tokenName">Token Name:</label>
+    <input type="text" id="tokenName" placeholder="E.g., EtherLion">
+
+    <label for="tokenSymbol">Symbol (3-5 Letters):</label>
+    <input type="text" id="tokenSymbol" placeholder="ELN">
+
+    <label for="totalSupply">Total Supply:</label>
+    <input type="number" id="totalSupply" placeholder="1000000000">
+
+    <label for="purpose">Token Use Case:</label>
+    <input type="text" id="purpose" placeholder="E.g., Rebuilding Cities, Sovereign Reparations">
+
+    <button onclick="generateToken()">🔒 Generate Token</button>
+  </div>
+
+  <div class="output" id="tokenOutput"></div>
+
+  <div class="seal">
+    ⛔ This system is protected by the <strong>Sovereign Grid Quantum Lock</strong>.<br>
+    Any duplication attempt will result in <em>immediate sealing of Ether Access Ports</em>.<br>
+    This generator belongs to: <strong>Carmelo Etienne | Sophia Mustafa L's Trust | EtherMiner Node</strong><br>
+    Registered with USPS, IRS, Tartarian Market, and Cosmic Registry.
+  </div>
+
+  <script>
+    const securityHash = "d4f9e21c77b9e8a7b3f531a7f8b234c8";
+
+    function generateToken() {
+      const name = document.getElementById('tokenName').value;
+      const symbol = document.getElementById('tokenSymbol').value.toUpperCase();
+      const supply = document.getElementById('totalSupply').value;
+      const purpose = document.getElementById('purpose').value;
+      const tokenID = 'TART-' + Math.floor(Math.random() * 9999999999) + '-' + securityHash.slice(0, 4);
+
+      const result = `
+📜 Sovereign Token Issued
+
+🪙 Token Name: ${name}
+🔤 Symbol: ${symbol}
+💰 Total Supply: ${supply}
+📌 Purpose: ${purpose}
+🔐 Tartarian Token ID: ${tokenID}
+📡 Registered: EtherMiner Grid / DeepThought AI
+🧾 Status: VALID – FOR PRIVATE USE ONLY
+
+Protected by: Universal Law, Ether Grid Core Seal, and Divine Constitution.
+      `;
+
+      document.getElementById('tokenOutput').innerText = result;
+    }
+
+    function checkKey(e) {
+      if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) {
+        alert("🚫 Developer tools are disabled on this sovereign node.");
+        return false;
+      }
+    }
+  </script>
+
+</body>
+</html>
