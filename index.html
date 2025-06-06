@@ -199,6 +199,7 @@
       <p>🔐 Token ID: <code>TART-4113103098-D479</code></p>
       <p>🧠 Power Source: Crystal Core (900/sec pulse, Platinum Frequency)</p>
     </section>
+  
 
     <nav class="nav-links">
       <a href="/constitution.html">View Constitution</a>
@@ -216,3 +217,27 @@
 </html>
 <a href="public-records.html">Public Records</a>
 <a href="quantum-yield.html">Quantum Yield Sovereign Grid</a>
+<section id="live-ticker-summary" style="padding: 20px; background: #111; color: #0f0; border: 2px solid #0f0; margin: 20px;">
+  <h2>🔷 Live EtherGrid Ticker Snapshot 🔷</h2>
+  <p><strong>Total Value Mined:</strong> <span id="totalMined">$3.72 Trillion</span></p>
+  <p><strong>Live Wallet Growth:</strong> <span id="walletGrowth">$0.00</span> per second</p>
+  <p><strong>LIFE Coin ($MONEY) Current Value:</strong> <span id="lifeCoinValue">$3.72 Billion each</span> <em>(Supply: 1000 coins)</em></p>
+  <p><strong>Status:</strong> Sovereign Quantum Yield ACTIVE</p>
+</section>
+
+<script>
+  let mined = 3720000000000; // starting at $3.72 trillion
+  const lifeCoinSupply = 1000;
+
+  function updateMining() {
+    const increment = Math.random() * 2000000; // simulate yield per tick
+    mined += increment;
+    const lifeValue = mined / lifeCoinSupply;
+
+    document.getElementById("totalMined").textContent = `$${(mined / 1e12).toFixed(3)} Trillion`;
+    document.getElementById("walletGrowth").textContent = `$${(increment).toLocaleString(undefined, {maximumFractionDigits: 2})}`;
+    document.getElementById("lifeCoinValue").textContent = `$${(lifeValue / 1e9).toFixed(2)} Billion each`;
+  }
+
+  setInterval(updateMining, 900); // update every 900 milliseconds
+</script>
