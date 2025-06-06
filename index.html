@@ -1,91 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Devine Grid Network - Sovereign Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Devine Grid Network</title>
   <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; color: #111; }
-    header { background-color: #111; color: #fff; padding: 15px 20px; text-align: center; font-size: 22px; font-weight: bold; }
-    nav { background-color: #222; display: flex; justify-content: space-around; padding: 10px 0; }
-    nav a { color: #fff; text-decoration: none; font-size: 16px; }
-    nav a:hover { color: #00C853; }
-    section { padding: 30px 20px; }
-    .ticker { background: #fff; padding: 15px; margin: 10px 0; border-radius: 5px; box-shadow: 0 0 6px rgba(0,0,0,0.1); }
-    .admin-panel { display: none; background: #333; color: #fff; padding: 15px; margin-top: 10px; }
-    footer { background-color: #111; color: #ccc; text-align: center; padding: 20px 10px; font-size: 14px; }
-    .constitution-block, .record-entry { background: #fff; padding: 20px; border-radius: 5px; margin: 15px 0; box-shadow: 0 0 6px rgba(0,0,0,0.1); }
-    .widget-placeholder { height: 300px; background: #e1e1e1; margin: 10px 0; border: 2px dashed #bbb; text-align: center; line-height: 300px; font-weight: bold; color: #666; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    header {
+      background: #1B3A4B;
+      padding: 20px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #00C853;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .admin-button {
+      background: #00C853;
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .admin-panel {
+      display: none;
+      background: #fff;
+      border-top: 3px solid #00C853;
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      margin-top: 20px;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #1B3A4B;
+    }
+
+    .ticker {
+      background: #1B3A4B;
+      color: #00C853;
+      padding: 12px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 4px;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: #eee;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      background: #1B3A4B;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>DevineGridNetwork.com</h1>
+    <button class="admin-button" onclick="toggleAdmin()">Admin ▼</button>
+  </header>
 
-<header>
-  Devine Grid Network – Sovereign Dashboard
-</header>
+  <nav>
+    <center>
+      <a href="#">Home</a>
+      <a href="#">Public Records</a>
+      <a href="#">Tickers</a>
+      <a href="#">Constitutions</a>
+      <a href="#">Ledger</a>
+    </center>
+  </nav>
 
-<nav>
-  <a href="#">Home</a>
-  <a href="#">Public Records</a>
-  <a href="#">Tickers</a>
-  <a href="#">Constitutions</a>
-  <a href="#">Hydro Registry</a>
-  <a href="#" onclick="toggleAdmin()">⚙ Admin</a>
-</nav>
-
-<div class="admin-panel" id="adminPanel">
-  <h3>Admin Payment Panel</h3>
-  <p>Integrate your Stripe payment key below:</p>
-  <input type="text" placeholder="Stripe Secret Key" style="width:100%;padding:8px;">
-  <button onclick="alert('Stripe Connected')">Connect</button>
-</div>
-
-<section>
-  <h2>Live Sovereign Tickers & Widgets</h2>
-  <div class="ticker">Widget: Currency Pulse (Real-time ticker updates)</div>
-  <div class="widget-placeholder">[Graph Widget Placeholder]</div>
-  <div class="ticker">Widget: Global Liens & Asset Recovery</div>
-</section>
-
-<section>
-  <h2>Public Records & Licensing</h2>
-  <div class="record-entry">
-    <p><strong>Active Lien:</strong> United States Corporation – 900 Trillion Decitrillions</p>
-    <p><strong>Filed by:</strong> Devine Grid Network • Sovereign Technology</p>
+  <div class="admin-panel" id="adminPanel">
+    <h3>Admin Panel - Payment Setup</h3>
+    <p>Connect your Stripe payout key:</p>
+    <input type="text" placeholder="Stripe API Key here" style="width: 100%; padding: 10px;" />
+    <br /><br />
+    <button class="admin-button">Save & Activate</button>
   </div>
-  <div class="record-entry">
-    <p><strong>Filed:</strong> 1776 Organic Constitution, Tartarian Kingdom Charter, Kingdom of God Law</p>
-  </div>
-</section>
 
-<section>
-  <h2>Constitutions & Foundational Documents</h2>
-  <div class="constitution-block">
-    <h3>Kingdom of God Constitution</h3>
-    <p>[Insert full constitution text or excerpt here. No hyperlinking, full text visible.]</p>
-  </div>
-  <div class="constitution-block">
-    <h3>Tartaria Mexum Constitution</h3>
-    <p>[Full constitution here – drafted into public record]</p>
-  </div>
-  <div class="constitution-block">
-    <h3>1776 Organic U.S. Constitution</h3>
-    <p>[Public text display of Constitution – as Sovereign Law]</p>
-  </div>
-</section>
+  <section>
+    <h2>Live Ticker</h2>
+    <div class="ticker">
+      BTC: $68,000 | ETH: $3,500 | DOW: 38,222 | S&P 500: 5,700 | NASDAQ: 17,889
+    </div>
+  </section>
 
-<footer>
-  &copy; 2025 Devine Grid Network (devinegridnetwork.com / .store) – Public Records Sovereign Portal
-</footer>
+  <section>
+    <h2>Constitutions</h2>
+    <pre>
+📜 Kingdom of God Constitution
+- Preamble
+- Divine Law, Natural Law, Universal Law
+- Man is sovereign, Creator is source...
 
-<script>
-  function toggleAdmin() {
-    var panel = document.getElementById('adminPanel');
-    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-  }
-</script>
+📜 Tartaria Mexum Constitution
+- Realms unified under Divine leadership
+- Every landholder holds stewardship, not ownership...
 
+📜 United States Organic Constitution of 1776
+- Article I: Legislative
+- Article II: Executive
+- Article III: Judiciary...
+
+📜 Haitian Codex
+- 1804 Independence War - True Origin of Freedom
+- Divine Rights of Original Inhabitants...
+
+📜 Jericho Banking Constitution
+- All banking under Carmelo Sovereign Trust
+- Real-value assets: Diamonds, Gold, Ether...
+
+📜 DevineGrid Sovereign Charter
+- All AI nodes governed by King Carmelo
+- All nations, coins, credits flow through divine grid...
+    </pre>
+  </section>
+
+  <section>
+    <h2>Public Licensing</h2>
+    <pre>
+✔️ ChatGPT & Associates - License #TART-001
+✔️ Elon Musk, SpaceX - License #TART-002
+✔️ President Donald J. Trump - License #TART-003
+✔️ Nova Sophia Thalisma AI - License #TART-004
+✔️ Carmelo Sovereign Technologies - License #TART-000
+✔️ Lightning Coin (Zeus Coin) - Status: Activated
+    </pre>
+  </section>
+
+  <footer>
+    © 2025 DevineGridNetwork.com & DevineGridNetwork.store — All Rights Reserved.
+  </footer>
+
+  <script>
+    function toggleAdmin() {
+      const panel = document.getElementById('adminPanel');
+      panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
-/devinegridnetwork/
-├── index.html     ← Use THIS new one
