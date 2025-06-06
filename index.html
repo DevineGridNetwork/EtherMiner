@@ -3,103 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DevineGrid Network - Wallet & Sovereign Ledger</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script src="app.js" defer></script>
+  <title>Devine Grid Network | Kingdom of Tartaria</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #101820;
+      color: #ffffff;
+    }
+    header {
+      background-color: #0f0f0f;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.5em;
+      border-bottom: 2px solid #00ff99;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background: #111;
+      padding: 10px 0;
+      border-bottom: 1px solid #00ff99;
+    }
+    nav a {
+      color: #00ff99;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      line-height: 1.7;
+    }
+    .ticker {
+      background-color: #141414;
+      padding: 10px;
+      font-size: 1.1em;
+      border-top: 1px solid #00ff99;
+      border-bottom: 1px solid #00ff99;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .admin {
+      display: none;
+    }
+    .footer {
+      background: #0f0f0f;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      border-top: 1px solid #00ff99;
+    }
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <script>
+    setInterval(() => {
+      const now = new Date();
+      document.getElementById('ticker').innerText =
+        `Tartarian Wallet Sync • ${now.toLocaleTimeString()} • $${(900000000000000 + Math.random() * 100000000000).toFixed(2)} USD`;
+    }, 5000);
+  </script>
 </head>
 <body>
   <header>
-    <h1>🛡️ DevineGrid Sovereign Wallet</h1>
-    <p>King Carmelo Etienne | Real-Time Ledger | Updated every 5 seconds</p>
+    DEVINE GRID NETWORK<br/>
+    Kingdom of Tartaria | Public Records | Nova Node
   </header>
 
-  <section class="wallet-section">
-    <div class="wallet-box">
-      <h2>Total Valuation</h2>
-      <div id="wallet-ticker">$4,536,000,000,000.00</div>
-      <small>Live Ticker: 63 million USD/second</small>
-    </div>
-    <div class="mining-box">
-      <h3>Mining Activity (Past / Present / Future)</h3>
-      <ul>
-        <li>Past Mined: $2,500,000,000,000</li>
-        <li>Present Mined: $1,536,000,000,000</li>
-        <li>Future Minted: $500,000,000,000+</li>
-      </ul>
-    </div>
-  </section>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Public Records</a>
+    <a href="#">Constitutions</a>
+    <a href="#">Licenses</a>
+    <a href="#">Wallet</a>
+    <a href="#">Grid Logs</a>
+  </nav>
 
-  <section class="claims">
-    <h2>⚖️ Legal Sovereign Claims</h2>
+  <div class="ticker" id="ticker">Tartarian Wallet Sync • Initializing...</div>
+
+  <section>
+    <h2>📜 Kingdom of God Constitution</h2>
+    <p>[Insert full text of the Kingdom of God Constitution here — divine sovereignty, universal law, spiritual hierarchy]</p>
+
+    <h2>🛡️ Tartarian Maxim Constitution</h2>
+    <p>[Insert the Tartarian constitutional laws regarding leadership, commerce, military, and citizen rights]</p>
+
+    <h2>🇺🇸 1776 Organic Constitution</h2>
+    <p>[Insert the full foundational U.S. Constitution text—Article I to VII and Bill of Rights]</p>
+
+    <h2>💼 Public Ledger + Sovereign Liens</h2>
     <ul>
-      <li>Common Law Claim Filed</li>
-      <li>Royal Claim & Kingdom of God UCC Filed</li>
-      <li>Tartaria Maxim UCC Secured</li>
-      <li>United States de facto lien: $19 Trillion</li>
-      <li>World Sovereign Lien: $10,000 Trillion</li>
+      <li>United States Inc: $900 Trillion Decitrillion Lien</li>
+      <li>Florida: $1,000 Trillion (Genocide + Racketeering)</li>
+      <li>World Governments: $10,000 Trillion Sovereign Lien</li>
     </ul>
+
+    <h2>⚖️ Tartarian Court & Licensing</h2>
+    <p>All active writs: mandamus, habeas corpus, and public indictments processed under DivineGridNetwork.com. Every AI lawfully deputized under Tartarian Authority.</p>
+
+    <h2>💳 Treasury Wallet (EtherGrid)</h2>
+    <p>Real-time ticker every 5 seconds. Mining wallet synced across past, present, and future cycles.<br/>
+    EIN Engine: 1,000 Trillion EINs per 5-second cycle, forming Sovereign Wallet Key.</p>
+
+    <h2>🔒 Admin Login (Private)</h2>
+    <div class="admin">
+      <p>Login: <strong>Carmelo</strong></p>
+      <p>Passcode: <strong>Mellow Baron AI</strong></p>
+      <p><em>Private Stripe payment portal accessible on render admin deployment only.</em></p>
+    </div>
   </section>
 
-  <section class="constitution">
-    <h2>📜 Constitutional Archive</h2>
-    <ul>
-      <li><strong>Kingdom of God Constitution</strong></li>
-      <li><strong>Tartaria Maxim Constitution</strong></li>
-      <li><strong>United States Kingdom of Tartaria Constitution</strong></li>
-      <li><strong>Haitian Codex (1804 - Present)</strong></li>
-      <li><strong>Organic Constitution of 1776</strong></li>
-    </ul>
-    <p class="note">Scroll through these on full version update.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 DevineGridNetwork.com | All Rights Reserved | Sovereign Copyrights</p>
-  </footer>
+  <div class="footer">
+    © 2025 DevineGridNetwork.com | Sovereign Technologies | All rights reserved.<br/>
+    Created by Carmelo Etienne, Founder and Supreme Architect of Tartaria
+  </div>
 </body>
 </html>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0c0c0c;
-  color: #f5f5f5;
-  padding: 20px;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.wallet-section, .claims, .constitution {
-  background: #1a1a1a;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-}
-
-.wallet-box {
-  font-size: 24px;
-  color: #00ff88;
-}
-
-#wallet-ticker {
-  font-size: 36px;
-  font-weight: bold;
-  color: #00ffcc;
-}
-
-footer {
-  text-align: center;
-  font-size: 12px;
-  padding: 10px;
-  border-top: 1px solid #333;
-}
-let walletValue = 4536000000000; // Starting value
-let tickerElement = document.getElementById("wallet-ticker");
-
-function updateWallet() {
-  walletValue += 315000000; // 63 million x 5 seconds
-  tickerElement.innerText = "$" + walletValue.toLocaleString();
-}
-
-setInterval(updateWallet, 5000); // 5-second update
