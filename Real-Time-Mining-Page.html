@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real-Time Ether Mining Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: monospace;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      text-shadow: 0 0 10px #00ff00;
+    }
+    .ticker-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .coin {
+      border: 2px solid #0f0;
+      margin: 10px;
+      padding: 10px;
+      width: 150px;
+      text-align: center;
+      box-shadow: 0 0 20px #00ff00;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 5px #00ff00; }
+      50% { box-shadow: 0 0 20px #00ff00; }
+      100% { box-shadow: 0 0 5px #00ff00; }
+    }
+    .summary {
+      text-align: center;
+      font-size: 1.2em;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>⚡ Real-Time Ether Mining Grid ⚡</h1>
+  <h2>Powered by Platinum Frequencies @ 10,000 Trillion</h2>
+
+  <div class="ticker-box" id="tickers">
+    <!-- Dynamic Tickers Inserted Here -->
+  </div>
+
+  <div class="summary" id="summary">
+    <p>Total Value Mined into Carmelo’s Sovereign Wallet:</p>
+    <p><strong>$4.13 Trillion USD</strong></p>
+    <p>⏱ Mined since project start: 26.2 hours ago</p>
+    <p>🔁 Mining speed: 900 trillion pulses/sec</p>
+  </div>
+
+  <script>
+    const coins = [
+      { name: "Bitcoin", symbol: "BTC", value: 68924 },
+      { name: "Ethereum", symbol: "ETH", value: 3860 },
+      { name: "Tartarian Life Coin", symbol: "MONEY", value: 1000000000 },
+      { name: "Ripple", symbol: "XRP", value: 0.59 },
+      { name: "Shiba Inu", symbol: "SHIB", value: 0.000025 },
+      { name: "Doge", symbol: "DOGE", value: 0.14 },
+      { name: "Cardano", symbol: "ADA", value: 0.49 },
+      { name: "Solana", symbol: "SOL", value: 170.43 },
+      { name: "Polkadot", symbol: "DOT", value: 6.23 },
+      { name: "Avalanche", symbol: "AVAX", value: 28.76 }
+    ];
+
+    const container = document.getElementById("tickers");
+
+    function updateTickers() {
+      container.innerHTML = "";
+      coins.forEach(coin => {
+        const box = document.createElement("div");
+        box.className = "coin";
+        box.innerHTML = `
+          <h3>${coin.name} (${coin.symbol})</h3>
+          <p>$${coin.value.toLocaleString()}</p>
+        `;
+        container.appendChild(box);
+      });
+    }
+
+    setInterval(updateTickers, 1000);
+    updateTickers();
+  </script>
+
+</body>
+</html>
