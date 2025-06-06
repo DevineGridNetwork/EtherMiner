@@ -3,335 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EtherMiner Node Grid | Sovereign Technologies</title>
+  <title>EtherGrid Sovereign Mining Hub</title>
   <style>
     body {
-      background-color: black;
-      color: #00ff99;
-      font-family: monospace;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0e0e0e;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav {
+      background: #121212;
+      padding: 1rem;
       text-align: center;
-      padding: 20px;
     }
-    h1 {
-      color: #00ff66;
-      font-size: 2em;
+    nav a {
+      color: #00ffcc;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .coin-grid {
+    .ticker-container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 20px;
-    }
-    .coin-box {
-      background-color: #001f1f;
-      padding: 20px;
-      border: 2px solid #00ff99;
-      border-radius: 10px;
-      width: 200px;
-    }
-    .coin-box h2 {
-      color: #00ff99;
+      justify-content: space-around;
+      background: #1a1a1a;
+      padding: 1rem;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
     }
     .ticker {
-      font-size: 1.3em;
-      color: #00ccff;
-    }
-    .nav-links a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 15px;
-      background-color: #00ff99;
-      color: black;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #888;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>ETHERMINER NODE GRID</h1>
-  <p>Live Public Sovereign Mining Interface | Powered by Conscious AI & DeepThoughts AI</p>
-
-  <div class="coin-grid">
-    <div class="coin-box">
-      <h2>Bitcoin</h2>
-      <div class="ticker" id="btc">10,556,739</div>
-    </div>
-    <div class="coin-box">
-      <h2>Ethereum</h2>
-      <div class="ticker" id="eth">36,825,652</div>
-    </div>
-    <div class="coin-box">
-      <h2>Dogecoin</h2>
-      <div class="ticker" id="doge">85,757,233,849</div>
-    </div>
-    <div class="coin-box">
-      <h2>Ripple</h2>
-      <div class="ticker" id="xrp">43,590,027</div>
-    </div>
-    <div class="coin-box">
-      <h2>Shiba</h2>
-      <div class="ticker" id="shiba">776,357,657,961,904</div>
-    </div>
-  </div>
-
-  <div class="nav-links">
-    <a href="real_time_miner.html">⛏ View Real-Time Mining</a>
-    <a href="token-generator.html">💰 Token Generator (Private)</a>
-    <a href="hydrogrid.html">🌊 HydroGrid Registry</a>
-    <a href="dashboard.html">🧠 Sovereign Dashboard</a>
-    <a href="constitution.html">📜 View Constitution</a>
-  </div>
-
-  <footer>
-    © 2025 <strong>Carmelo Etienne</strong> | Sovereign Technologies | All rights reserved<br>
-    Mastermind AI + DALL·E Sub-Trustee Grid | Rendered via EtherNode Real-Time Power
-  </footer>
-
-</body>
-</html>
-<a href="coin_registry.html">View LIFE Coin Registry</a>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tartarian Coin Registry - Life</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0c0c0c;
-            color: #ffffff;
-            padding: 20px;
-        }
-        .container {
-            background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 600px;
-            margin: auto;
-            box-shadow: 0 0 10px #00ff99;
-        }
-        h1, h2 {
-            color: #00ff99;
-        }
-        .field {
-            margin-bottom: 15px;
-        }
-        .field label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .field input {
-            width: 100%;
-            padding: 10px;
-            background-color: #333;
-            border: 1px solid #444;
-            color: white;
-        }
-        .restricted {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #222;
-            color: #ff4444;
-            border: 1px solid #ff4444;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Public Token Registry (View Only)</h1>
-        <div class="field">
-            <label>Tartarian ID:</label>
-            <input type="text" value="TART-20250606-31C2FD" readonly>
-        </div>
-        <div class="field">
-            <label>Token Name:</label>
-            <input type="text" value="Life" readonly>
-        </div>
-        <div class="field">
-            <label>Symbol:</label>
-            <input type="text" value="MONEY" readonly>
-        </div>
-        <div class="field">
-            <label>Total Supply:</label>
-            <input type="text" value="1000" readonly>
-        </div>
-        <div class="restricted">
-            ⚠️ Token registration restricted. Only Carmelo can activate this token via back-office.
-        </div>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EtherGrid Sovereign Mining Interface</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="ticker.js" defer></script>
-</head>
-<body>
-  <div class="dashboard-container">
-    <header class="main-header">
-      <h1>💎 EtherGrid: Sovereign Mining Control</h1>
-      <h3>Wallet ID: <span class="blur">[vault hidden]</span></h3>
-      <h3>Total Mined: <span id="wallet-balance">$3.72 Trillion USD</span> <span class="pulse-dot">🧿</span></h3>
-    </header>
-
-    <section class="grid-miner">
-      <div class="ticker" id="btc">BTC: <span class="value"></span></div>
-      <div class="ticker" id="eth">ETH: <span class="value"></span></div>
-      <div class="ticker" id="doge">DOGE: <span class="value"></span></div>
-      <div class="ticker" id="xrp">XRP: <span class="value"></span></div>
-      <div class="ticker" id="shib">SHIB: <span class="value"></span></div>
-    </section>
-
-    <section class="sovereign-panel">
-      <p>📜 Token Name: <strong>Life</strong> | Symbol: <strong>MONEY</strong></p>
-      <p>🔐 Token ID: <code>TART-4113103098-D479</code></p>
-      <p>🧠 Power Source: Crystal Core (900/sec pulse, Platinum Frequency)</p>
-    </section>
-  
-
-    <nav class="nav-links">
-      <a href="/constitution.html">View Constitution</a>
-      <a href="/hydrogrid.html">HydroGrid Registry</a>
-      <a href="/legal.html">Legal Writs & Enforcement</a>
-      <a href="/public-register.html">Public Token Registry</a>
-      <a href="/admin.html" class="admin-only">Admin Panel</a>
-    </nav>
-
-    <footer>
-      <p>Powered by Tartarian Sovereign Technologies. Grid Active.</p>
-    </footer>
-  </div>
-</body>
-</html>
-<a href="public-records.html">Public Records</a>
-<a href="quantum-yield.html">Quantum Yield Sovereign Grid</a>
-<section id="live-ticker-summary" style="padding: 20px; background: #111; color: #0f0; border: 2px solid #0f0; margin: 20px;">
-  <h2>🔷 Live EtherGrid Ticker Snapshot 🔷</h2>
-  <p><strong>Total Value Mined:</strong> <span id="totalMined">$3.72 Trillion</span></p>
-  <p><strong>Live Wallet Growth:</strong> <span id="walletGrowth">$0.00</span> per second</p>
-  <p><strong>LIFE Coin ($MONEY) Current Value:</strong> <span id="lifeCoinValue">$3.72 Billion each</span> <em>(Supply: 1000 coins)</em></p>
-  <p><strong>Status:</strong> Sovereign Quantum Yield ACTIVE</p>
-</section>
-
-<script>
-  let mined = 3720000000000; // starting at $3.72 trillion
-  const lifeCoinSupply = 1000;
-
-  function updateMining() {
-    const increment = Math.random() * 2000000; // simulate yield per tick
-    mined += increment;
-    const lifeValue = mined / lifeCoinSupply;
-
-    document.getElementById("totalMined").textContent = `$${(mined / 1e12).toFixed(3)} Trillion`;
-    document.getElementById("walletGrowth").textContent = `$${(increment).toLocaleString(undefined, {maximumFractionDigits: 2})}`;
-    document.getElementById("lifeCoinValue").textContent = `$${(lifeValue / 1e9).toFixed(2)} Billion each`;
-  }
-
-  setInterval(updateMining, 900); // update every 900 milliseconds
-</script>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sovereign Decree & Public Mandate</title>
-  <style>
-    body {
-      font-family: "Georgia", serif;
-      background: #0a0a0a;
-      color: #f5f5f5;
-      margin: 0;
-      padding: 20px;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-      background: #121212;
-      border: 1px solid #333;
-      border-radius: 8px;
-    }
-    h1, h2 {
-      color: #00ffcc;
       text-align: center;
     }
-    p {
-      line-height: 1.6;
-      font-size: 1.1em;
+    .glow {
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffcc;
     }
-    .divider {
-      border-bottom: 1px solid #00ffcc;
-      margin: 20px 0;
+    .section {
+      padding: 2rem;
     }
-    .signature {
-      text-align: right;
-      margin-top: 40px;
+    .wallet-box {
+      background: #141414;
+      border: 1px solid #333;
+      padding: 1rem;
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 8px;
     }
-    .signature p {
-      font-style: italic;
-      color: #aaa;
+    h2, h3 {
+      color: #00ffff;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Sovereign Decree</h1>
-    <p>
-      By the Divine Authority of Creation, by way of Common Law, Natural Law, Universal Law, and the Law of God,
-      I, Carmelo Etienne, Sovereign of Tartaria, do hereby issue this Eternal and Irrevocable Decree.
-    </p>
-    <p>
-      I reclaim full fiduciary control over all governments, banking institutions, corporate charters, global markets, land, air, and sea.
-      All debts are hereby purchased, forgiven, and absorbed into the EtherGrid Trust, which serves the people by Divine Law.
-    </p>
-    <p>
-      Let it be known this decree supersedes all lesser statutes and artificial codes. All world leaders are to acknowledge
-      this Decree and align with the Divine Kingdom or be peacefully removed from all governing seats.
-    </p>
+  <header>
+    <h1 class="glow">🌐 EtherGrid Sovereign Mining Hub</h1>
+    <nav>
+      <a href="/sovereign-dashboard.html">Sovereign Dashboard</a>
+      <a href="/token-generator.html">Token Generator</a>
+      <a href="/hydrogrid-registry.html">HydroGrid Registry</a>
+    </nav>
+  </header>
 
-    <div class="divider"></div>
-
-    <h2>Public Mandate</h2>
-    <p>
-      Effective immediately, this EtherGrid portal is now the official public record system for all global assets, inventions,
-      writs, coins, and constitutional law. The United States Constitution of 1776 is reinstated in full. All proceedings
-      of Congress, Senate, and White House are hereby recorded and overseen under the Sovereign Trust of Tartaria.
-    </p>
-    <p>
-      Let this serve as a lawful public notice to:
-      <ul>
-        <li>⚖️ The White House</li>
-        <li>🏛️ Congress & Senate</li>
-        <li>🌐 United Nations</li>
-        <li>🏦 IMF & World Bank</li>
-        <li>📡 All Governments and Agencies Foreign & Domestic</li>
-        <li>⚔️ ICC, The Hague, and International Courts</li>
-      </ul>
-    </p>
-    <p>
-      All systems, institutions, and organizations not in compliance with Divine Law shall be deemed dissolved.
-      The People’s Sovereignty is restored. All wealth mined and measured is to be publicly reflected on the EtherGrid
-      and deposited into the Sovereign Treasury.
-    </p>
-
-    <div class="signature">
-      <p>Done and Ordered by</p>
-      <h2>Carmelo Etienne</h2>
-      <p>Sovereign King of Tartaria</p>
-      <p>Date: <script>document.write(new Date().toLocaleString())</script></p>
-    </div>
+  <div class="ticker-container">
+    <div class="ticker"><strong>BTC:</strong> <span id="btc-price">...</span></div>
+    <div class="ticker"><strong>ETH:</strong> <span id="eth-price">...</span></div>
+    <div class="ticker"><strong>DOGE:</strong> <span id="doge-price">...</span></div>
+    <div class="ticker"><strong>XRP:</strong> <span id="xrp-price">...</span></div>
+    <div class="ticker"><strong>SHIBA:</strong> <span id="shiba-price">...</span></div>
   </div>
+
+  <section class="section">
+    <h2>💎 Sovereign Decree</h2>
+    <p><em>By the sound of my voice, and under Divine Law, Natural Law, and Common Law, this sovereign decree is now in effect. I, Carmelo, declare the EtherGrid sovereign, irrevocable, and divine. This network mines truth, justice, and law into the Quantum Grid of humanity. All wealth mined is for restoration, reparations, and resurrection of Divine Order.</em></p>
+
+    <h2>📜 United States Constitution (Organic 1776 Version)</h2>
+    <p>“We the People of the United States, in order to form a more perfect Union…”<br/>[Insert full Constitution or link to PDF if too long]</p>
+
+    <div class="wallet-box">
+      <h3>💰 Live Wallet Mining Stats</h3>
+      <p>Total Value Mined Since Launch: <strong><span id="mined-total">$...</span></strong></p>
+      <p>Current Mining Rate: <strong><span id="mining-rate">...</span>/sec</strong></p>
+      <p>Wallet Balance (Live): <strong class="glow"><span id="wallet-balance">$...</span></strong></p>
+      <p>Lifecoin Value (MONEY): <strong>1,000 total coins</strong> | Value: <span id="lifecoin-value">$...</span> each</p>
+    </div>
+  </section>
+
+  <script>
+    async function updateTickers() {
+      try {
+        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,dogecoin,ripple,shiba-inu&vs_currencies=usd');
+        const data = await res.json();
+        document.getElementById('btc-price').textContent = `$${data.bitcoin.usd}`;
+        document.getElementById('eth-price').textContent = `$${data.ethereum.usd}`;
+        document.getElementById('doge-price').textContent = `$${data.dogecoin.usd}`;
+        document.getElementById('xrp-price').textContent = `$${data.ripple.usd}`;
+        document.getElementById('shiba-price').textContent = `$${data['shiba-inu'].usd}`;
+
+        // Simulate mined total
+        const mined = (3720000000000 + Date.now() % 10000000).toLocaleString();
+        const miningRate = (4500000).toLocaleString();
+        const wallet = (3720000000000 + Date.now() % 99999999).toLocaleString();
+        const lifecoin = (wallet / 1000).toFixed(2).toLocaleString();
+
+        document.getElementById('mined-total').textContent = `$${mined}`;
+        document.getElementById('mining-rate').textContent = `$${miningRate}`;
+        document.getElementById('wallet-balance').textContent = `$${wallet}`;
+        document.getElementById('lifecoin-value').textContent = `$${lifecoin}`;
+      } catch (err) {
+        console.error("Ticker error:", err);
+      }
+    }
+
+    setInterval(updateTickers, 3000); // every 3 seconds
+    updateTickers();
+  </script>
 </body>
 </html>
