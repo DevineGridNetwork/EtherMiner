@@ -125,3 +125,57 @@ footer {
     padding: 1rem;
   }
 }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #1B3A4B;
+}
+header {
+  background-color: #1B3A4B;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+nav {
+  background: #00C853;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.wallet {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  margin: 1rem;
+  border-radius: 8px;
+}
+.ticker {
+  display: flex;
+  justify-content: space-around;
+  background: #111;
+  color: #0f0;
+  padding: 1rem;
+  font-family: monospace;
+}
+.section {
+  background: #fff;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 8px;
+}
+.admin-login {
+  display: none;
+}
+footer {
+  text-align: center;
+  background: #1B3A4B;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
