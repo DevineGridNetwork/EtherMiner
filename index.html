@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EtherMiner Grid | Carmelo ET</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0e0e0e;
+      color: #ffffff;
+      text-align: center;
+    }
+    header {
+      padding: 30px;
+      background: linear-gradient(to right, #111, #222);
+    }
+    header h1 {
+      font-size: 2em;
+      margin: 0;
+    }
+    .ticker-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 30px;
+    }
+    .ticker {
+      background-color: #1b1b1b;
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+      box-shadow: 0 0 15px #00ffcc;
+    }
+    .ticker h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.2em;
+    }
+    .ticker span {
+      font-size: 1.6em;
+      color: #00ffcc;
+    }
+    .main-image {
+      width: 90%;
+      max-width: 700px;
+      margin-top: 40px;
+      border: 2px solid #00ffcc;
+      border-radius: 10px;
+      box-shadow: 0 0 30px #00ffcc;
+    }
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #111;
+      font-size: 0.9em;
+    }
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function simulateMining() {
+      const coins = {
+        Bitcoin: Math.floor(Math.random() * 21000000),
+        Ethereum: Math.floor(Math.random() * 120000000),
+        Dogecoin: Math.floor(Math.random() * 132000000000),
+        Ripple: Math.floor(Math.random() * 100000000000),
+        Shiba: Math.floor(Math.random() * 1000000000000000)
+      };
+      Object.keys(coins).forEach(id => {
+        document.getElementById(id).innerText = coins[id].toLocaleString();
+      });
+    }
+
+    setInterval(simulateMining, 1000);
+    window.onload = simulateMining;
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>ETHERMINER NODE GRID</h1>
+    <p>Live Public Sovereign Mining Interface | Powered by Conscious AI & DeepThoughts AI</p>
+  </header>
+
+  <div class="ticker-container">
+    <div class="ticker"><h2>Bitcoin</h2><span id="Bitcoin"></span></div>
+    <div class="ticker"><h2>Ethereum</h2><span id="Ethereum"></span></div>
+    <div class="ticker"><h2>Dogecoin</h2><span id="Dogecoin"></span></div>
+    <div class="ticker"><h2>Ripple</h2><span id="Ripple"></span></div>
+    <div class="ticker"><h2>Shiba</h2><span id="Shiba"></span></div>
+  </div>
+
+  <img class="main-image" src="A_futuristic,_ultra-advanced_Ether-based_cryptocur.png" alt="EtherMiner Interface Image">
+
+  <footer>
+    <p>&copy; 2025 <strong>Carmelo Etienne</strong> | <a href="#">Sovereign Technologies</a> | <a href="#">View Constitution</a></p>
+    <p>Mastermind AI + DALL·E Sub-Trustee Grid | Rendered via EtherNode Real-Time Power</p>
+  </footer>
+</body>
+</html>
