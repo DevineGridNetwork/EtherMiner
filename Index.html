@@ -1,43 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ETHERMINER — Divine Sovereign Grid</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="scripts/miner.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EtherMiner Grid | Public View</title>
   <style>
     body {
-      background: #0a0a0a;
-      color: #00ffcc;
-      font-family: monospace;
-      text-align: center;
-      padding: 40px;
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
     }
-    .title {
-      font-size: 2.5em;
-      margin-bottom: 20px;
+    header {
+      background-color: #111;
+      padding: 30px;
+      text-align: center;
+      border-bottom: 2px solid #FFD700;
+    }
+    h1 {
+      color: #FFD700;
+      font-size: 30px;
     }
     .ticker {
-      font-size: 2em;
-      margin-top: 30px;
-    }
-    .amount {
-      font-size: 3em;
-      font-weight: bold;
+      background-color: #000;
       color: #00ff99;
+      padding: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: scroll-left 30s linear infinite;
+      font-family: monospace;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+    .gadget {
+      background-color: #1a1a1a;
+      margin: 10px auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    a {
+      color: #00c8ff;
+      text-decoration: none;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <div class="title">🌐 EtherMiner Sovereign Node</div>
-  <p>Tracking real-time sovereign wealth generated from past, present & future digital coin grids.</p>
+  <header>
+    <h1>🌐 EtherMiner Public Grid</h1>
+    <p>Live Real-Time Mining • Economic Recovery • Divine Sovereignty</p>
+  </header>
 
   <div class="ticker">
-    Total Wealth Mined (USD):<br/>
-    <span class="amount" id="wealthTicker">$0.00</span>
+    💸 Mined: $48,000,000,000 USD | ⛏️ Coins: BTC, ETH, XMR, LUNA (retrieved) | 📦 Hidden Wallets Recovered: 3,520,991 | 💡 Inventions: 248 | Warrants Executed: 78,001...
   </div>
 
-  <br><br>
-  <a href="bloggers.html" style="color:#0ff; text-decoration:underline;">→ Visit Sovereign AI Blogger Node</a>
+  <div class="content">
+    <div class="gadget">
+      <h3>🪙 Live Coin Mining Ticker</h3>
+      <p>Visualize in real-time the wealth and currencies mined.</p>
+      <p><strong>Estimated Daily Output:</strong> $7,230,190,000 USD</p>
+    </div>
+
+    <div class="gadget">
+      <h3>📜 Read the Press Release</h3>
+      <p><a href="press-release.html">Click here for public announcement.</a></p>
+    </div>
+
+    <div class="gadget">
+      <h3>📖 Public Constitution (Private-Mirrored)</h3>
+      <p><a href="constitution.html">Click here to read the governing document.</a></p>
+    </div>
+
+    <div class="gadget">
+      <h3>🔒 Internal AI Node Grid (Restricted)</h3>
+      <p><em>Mastermind AI operational. DeepThoughts: LIVE.</em></p>
+    </div>
+
+    <!-- Secret redirect if logged in privately -->
+    <!-- Replace this with a secure backend auth in full version -->
+    <!-- Or for now manually open -->
+    <!-- <a href="backoffice.html" style="display:none;"></a> -->
+  </div>
+
+  <footer>
+    &copy; 2025 EtherMiner Sovereign Grid • Created by Carmelo Etienne • All Rights Reserved
+  </footer>
 </body>
 </html>
