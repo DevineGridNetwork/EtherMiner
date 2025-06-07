@@ -447,3 +447,52 @@
     text-align: center;
   }
 </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Ticker Widget</title>
+  <style>
+    body {
+      background: #111;
+      color: #00ffcc;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+    }
+    .ticker-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background: #000;
+      padding: 15px;
+      border: 2px solid #00ffcc;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .ticker {
+      padding: 8px 12px;
+      background: #222;
+      margin: 5px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>📈 Live Market Tickers</h2>
+  <p>Updated: 2025-06-07 07:13:45</p>
+  <div class="ticker-container">
+    <div class="ticker">Bitcoin (BTC): $67,642.12</div>
+    <div class="ticker">Ethereum (ETH): $3,542.56</div>
+    <div class="ticker">LifeCoin (LFC): $1,204.33</div>
+    <div class="ticker">USD (US Dollar): $1.00</div>
+    <div class="ticker">EUR (Euro): $1.09</div>
+    <div class="ticker">JPY (Japanese Yen): $155.20</div>
+    <div class="ticker">Apple Inc. (AAPL): $192.33</div>
+    <div class="ticker">Tesla Inc. (TSLA): $179.75</div>
+    <div class="ticker">Amazon.com (AMZN): $182.00</div>
+    <div class="ticker">Sovereign Stock Index: $9,000,000.00</div>
+  </div>
+</body>
+</html>
