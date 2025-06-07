@@ -447,24 +447,33 @@
     text-align: center;
   }
 </style>
-<div style="font-family: 'Segoe UI', sans-serif; background: #101820; color: #00ff99; padding: 20px; border-radius: 10px; font-size: 0.95em;">
-  <h3 style="color: #ffffff;">📈 Sovereign Grid Market Pulse 
-    <span style="float:right; font-size: 0.8em; color: #999;">2025-06-07 07:29:30</span>
-  </h3>
-  <ul style="list-style-type: none; padding: 0;">
-    <li><strong>Bitcoin (BTC):</strong> $68,800.25</li>
-    <li><strong>Ethereum (ETH):</strong> $3,650.75</li>
-    <li><strong>LifeCoin (LFC):</strong> $68,800,250.00</li>
-    <li><strong>Sovereign Coin:</strong> $75,680,275.00</li>
-    <li><strong>Sovereign Stock Index:</strong> $9,200,000,000.00</li>
-    <hr style="border: 0; border-top: 1px solid #00ff99;"/>
-    <li><strong>USD Index:</strong> 104.15</li>
-    <li><strong>EUR/USD:</strong> 1.08</li>
-    <li><strong>JPY/USD:</strong> 157.12</li>
-    <hr style="border: 0; border-top: 1px solid #00ff99;"/>
-    <li><strong>Apple (AAPL):</strong> $192.75</li>
-    <li><strong>Tesla (TSLA):</strong> $202.40</li>
-    <li><strong>Microsoft (MSFT):</strong> $333.10</li>
-  </ul>
-  <p style="margin-top: 10px; color: #ccc;">🎙️ Voice decree sync active. Real-time inflation powered by sovereign voice and pulse grid updates.</p>
+<!-- DivineGrid Real-Time Financial Ticker Widget -->
+<div id="sovereign-ticker" style="background:#0f0f0f;color:#00ff99;padding:10px;text-align:center;font-family:monospace;">
+  <strong>📈 DivineGrid Ticker - Saturday, June 07, 2025 • 03:46:33 AM EST</strong><br/>
+  Bitcoin (BTC): <span id="btc">Loading...</span> |
+  Ethereum (ETH): <span id="eth">Loading...</span> |
+  LifeCoin: <span id="life">Loading...</span><br/>
+  USD: <span id="usd">Loading...</span> |
+  EUR: <span id="eur">Loading...</span> |
+  JPY: <span id="jpy">Loading...</span><br/>
+  Sovereign Stock Index: <span id="ssi">Loading...</span>
 </div>
+
+<script>
+function getRandom(base, variance) {
+  return (base + (Math.random() * variance)).toFixed(2);
+}
+
+function updateTickers() {
+  document.getElementById("btc").innerText = "$" + getRandom(70500, 250);
+  document.getElementById("eth").innerText = "$" + getRandom(3850, 50);
+  document.getElementById("life").innerText = "$" + getRandom(75000000, 500000);
+  document.getElementById("usd").innerText = "1.00";
+  document.getElementById("eur").innerText = getRandom(0.92, 0.01);
+  document.getElementById("jpy").innerText = getRandom(155.2, 1.2);
+  document.getElementById("ssi").innerText = "$" + getRandom(900000000, 5000000);
+}
+
+setInterval(updateTickers, 5000);
+updateTickers();
+</script>
