@@ -30,3 +30,24 @@
     </footer>
 </body>
 </html>
+<div id="ticker">$11,900,000,000,000 ↑</div>
+<script>
+    const startValue = 11900000000000;
+    const growthPerSecond = 1000000;
+    const startTime = new Date("2025-06-07T00:00:00Z").getTime();
+
+    function updateTicker() {
+        const now = new Date().getTime();
+        const elapsedSeconds = Math.floor((now - startTime) / 1000);
+        const currentValue = startValue + (elapsedSeconds * growthPerSecond);
+        const formatted = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            maximumFractionDigits: 0
+        }).format(currentValue);
+        document.getElementById("ticker").innerText = formatted + " ↑";
+    }
+
+    setInterval(updateTicker, 1000);
+    window.onload = updateTicker;
+</script>
