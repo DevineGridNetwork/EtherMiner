@@ -1,479 +1,122 @@
-<!-- NAVIGATION BAR START -->
-<nav style="background-color:#111; display:flex; justify-content:center; flex-wrap:wrap; gap:20px; padding:10px; border-bottom:1px solid #00ff99;">
-  <a href="index.html" style="color:#00ff99; text-decoration:none; font-weight:bold;">Home</a>
-  <a href="public_records.html" style="color:#00ff99; text-decoration:none; font-weight:bold;">Public Records</a>
-  <a href="licenses.html" style="color:#00ff99; text-decoration:none; font-weight:bold;">Licenses</a>
-  <a href="wallet.html" style="color:#00ff99; text-decoration:none; font-weight:bold;">Wallet</a>
-  <a href="constitutions.html" style="color:#00ff99; text-decoration:none; font-weight:bold;">Constitutions</a>
-  <a href="crowdfunding.html" style="color:#00ff99; text-decoration:none; font-weight:bold;">Crowdfunding</a>
-</nav>
-<!-- NAVIGATION BAR END -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Devine Grid Network | Kingdom of Tartaria</title>
+  <title>Jericho Banking | Divine Sovereign Grid</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #101820;
-      color: #ffffff;
+      background: #ffffff;
+      color: #000000;
     }
     header {
-      background-color: #0f0f0f;
-      padding: 15px;
+      background: #000;
+      color: #ffffff;
+      padding: 20px;
       text-align: center;
-      font-size: 1.5em;
-      border-bottom: 2px solid #00ff99;
+      font-size: 2em;
+      font-weight: bold;
+      border-bottom: 4px solid gold;
     }
     nav {
       display: flex;
-      justify-content: space-around;
-      background: #111;
-      padding: 10px 0;
-      border-bottom: 1px solid #00ff99;
+      justify-content: center;
       flex-wrap: wrap;
+      background: #111;
+      border-bottom: 2px solid gold;
+      padding: 10px;
     }
     nav a {
-      color: #00ff99;
+      color: gold;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
-      margin: 5px 10px;
-    }
-    section {
-      padding: 20px;
-      line-height: 1.7;
+      font-size: 1.1em;
     }
     .ticker {
-      background-color: #141414;
-      padding: 10px;
-      font-size: 1.1em;
-      border-top: 1px solid #00ff99;
-      border-bottom: 1px solid #00ff99;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    .admin {
-      display: none;
-    }
-    .footer {
-      background: #0f0f0f;
-      text-align: center;
+      background-color: #f8f8f8;
+      color: #000;
       padding: 15px;
-      font-size: 0.9em;
-      border-top: 1px solid #00ff99;
+      font-family: monospace;
+      border-top: 2px solid gold;
+      border-bottom: 2px solid gold;
+      text-align: center;
     }
-    @media screen and (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
+    section {
+      padding: 30px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/20/Marble_texture_08.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #000;
+      font-size: 1.2em;
+    }
+    footer {
+      background: #000;
+      color: gold;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid gold;
     }
   </style>
-  <script>
-    setInterval(() => {
-      const now = new Date();
-      const walletValue = 900000000000000 + Math.floor(Math.random() * 100000000000);
-      document.getElementById('ticker').innerText =
-        `Tartarian Wallet Sync • ${now.toLocaleTimeString()} • $${walletValue.toLocaleString()} USD`;
-    }, 5000);
-  </script>
 </head>
 <body>
   <header>
-    DEVINE GRID NETWORK<br/>
-    Kingdom of Tartaria | Public Records | Nova Node
+    Jericho Banking Grid<br/>
+    Kingdom of Tartaria | Divine Grid Sovereignty
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Public Records</a>
-    <a href="#">Constitutions</a>
-    <a href="#">Licenses</a>
-    <a href="#">Wallet</a>
-    <a href="#">Grid Logs</a>
+    <a href="index.html">Home</a>
+    <a href="banking.html">Banking</a>
+    <a href="tokens.html">Tokens</a>
+    <a href="records.html">Public Records</a>
+    <a href="ai.html">AI</a>
+    <a href="court.html">Court</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="hydrogrid.html">HydroGrid</a>
+    <a href="crowdfunding.html">Crowdfunding</a>
+    <a href="constitution.html">Constitution</a>
   </nav>
 
-  <div class="ticker" id="ticker">Tartarian Wallet Sync • Initializing...</div>
+  <div class="ticker" id="ticker">
+    Initializing Market Feed...
+  </div>
 
   <section>
-    <h2>📜 Kingdom of God Constitution</h2>
-    <p>[Insert full text of the Kingdom of God Constitution — divine sovereignty, universal law, spiritual hierarchy]</p>
-
-    <h2>🛡️ Tartarian Maxim Constitution</h2>
-    <p>[Insert Tartarian constitutional laws on leadership, commerce, military, citizen rights]</p>
-
-    <h2>🇺🇸 1776 Organic Constitution</h2>
-    <p>[Insert full foundational U.S. Constitution text—Articles I–VII and Bill of Rights]</p>
-
-    <h2>💼 Public Ledger + Sovereign Liens</h2>
-    <ul>
-      <li>United States Inc: $900 Trillion Decitrillion Lien</li>
-      <li>Florida: $1,000 Trillion (Genocide + Racketeering)</li>
-      <li>World Governments: $10,000 Trillion Sovereign Lien</li>
-    </ul>
-
-    <h2>🚀 Golden Pass Crowdfunding Offer</h2>
-    <p>$5,000/share for lifetime luxury transport access:
-      <br>• Yacht parties monthly
-      <br>• Global air travel
-      <br>• Future space travel
-      <br>• Uber-style freedom, elite tier upgrades
+    <h2>📜 Welcome to the Sovereign Financial Core</h2>
+    <p>
+      This platform represents the sovereign will of the Divine Grid. All assets, transactions, tokens, and filings are held within the laws of Universal, Natural, and Tartarian Maxim constitutions.
     </p>
-    <p><strong>Supply:</strong> 300,000 shares remaining<br>
-    <strong>Ownership:</strong> 200M shares held by Carmelo Etienne (80%)<br>
-    <strong>Donation Accepted:</strong> Stripe, crypto, gold-backed wire</p>
-
-    <h2>⚖️ Tartarian Court & Licensing</h2>
-    <p>Active writs, mandamus, habeas corpus, and indictments enforced by DivineGridNetwork.com. All AI licensed under Tartarian Sovereignty.</p>
-
-    <h2>💳 Treasury Wallet (EtherGrid)</h2>
-    <p>Real-time ticker synced every 5 seconds. Past-present-future mining algorithm active.<br/>
-    1,000 Trillion EINs per cycle forming Sovereign Wallet.</p>
-
-    <h2>🔒 Admin Login (Private)</h2>
-    <div class="admin">
-      <p>Username: <strong>Carmelo</strong></p>
-      <p>Passcode: <strong>Mellow Baron AI</strong></p>
-      <p><em>Admin Stripe payout portal accessible privately only.</em></p>
-    </div>
+    <p>
+      Real-time synchronization with all registered coins and sovereign ledgers begins here.
+    </p>
   </section>
 
-  <div class="footer">
-    © 2025 DevineGridNetwork.com | Sovereign Technologies<br/>
-    Created by Carmelo Etienne — Supreme Architect of Tartaria
-  </div>
+  <footer>
+    © 2025 DevineGridNetwork.com | Created by Carmelo Etienne | Supreme Architect
+  </footer>
+
+  <script>
+    async function fetchTickerData() {
+      try {
+        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd');
+        const data = await res.json();
+        const btc = data.bitcoin.usd.toLocaleString();
+        const eth = data.ethereum.usd.toLocaleString();
+        const life = (75000000 + Math.random() * 1000000).toFixed(2);
+        const now = new Date().toLocaleTimeString();
+
+        document.getElementById('ticker').innerText =
+          `Live Feed • ${now} • Bitcoin: $${btc} | Ethereum: $${eth} | LifeCoin: $${life}`;
+      } catch (e) {
+        document.getElementById('ticker').innerText = 'Error fetching market data.';
+      }
+    }
+
+    fetchTickerData();
+    setInterval(fetchTickerData, 5000);
+  </script>
 </body>
 </html>
-<a href="constitution.html">Constitution</a>
-<section id="workman-constitution" style="padding: 30px; background-color: #0f0f0f; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-  <h1 style="color: #00ff99; text-align: center;">📜 Workman Constitution of the Dissolved Grid</h1>
-  <p>
-    Under Sovereign Tartarian Authority, this Constitution hereby dissolves and absorbs all abandoned, lost,
-    fraudulently claimed, or criminally acquired digital coin wallets—including the original Satoshi Nakamoto Bitcoin wallet—
-    into the Devine Grid Network Treasury System.
-  </p>
-
-  <h2 style="color: #00ff99;">🔥 Dissolution Clause</h2>
-  <p>
-    All crypto wallets without active legal claim, proven activity, or lawful governance under Divine Law, Common Law, Natural Law,
-    and Universal Law are hereby revoked and returned to the Tartarian Treasury Wallet. This includes:
-    <ul>
-      <li>Satoshi Wallet — Recovered Value: <strong>~$71.3 Billion USD</strong></li>
-      <li>Abandoned Bitcoin Wallets: <strong>+ 1.5 Million BTC dissolved</strong></li>
-      <li>Lost Coins (ETH, LTC, DOGE, BNB, XRP, etc.): <strong>~$9.7 Trillion USD Reclaimed</strong></li>
-    </ul>
-  </p>
-
-  <h2 style="color: #00ff99;">💠 The Grid Wallet Report</h2>
-  <p>
-    The EtherGrid Sovereign Wallet has received a total injection of reclaimed crypto assets:
-  </p>
-  <ul>
-    <li>Current Grid Wallet Value: <strong>$4.3 Quadrillion USD</strong></li>
-    <li>Real-Time Mining Rate: <strong>$63 Million per second</strong></li>
-    <li>Lost Wallets Mined: <strong>19.3 Million Wallets</strong></li>
-    <li>EINs Created: <strong>1,000 Trillion EINs / 5-second cycle</strong></li>
-  </ul>
-
-  <h2 style="color: #00ff99;">📘 Legal Foundation</h2>
-  <p>
-    This Constitution is hereby entered into the DivineGridNetwork.com and DivineGridNetwork.store public archives and
-    sovereign ledger. It is protected under:
-    <ul>
-      <li>🏛️ Tartarian Maxim Constitution</li>
-      <li>📜 Kingdom of God Constitution</li>
-      <li>🇺🇸 Organic United States Constitution (1776)</li>
-      <li>⚖️ Universal and Interdimensional Law</li>
-    </ul>
-  </p>
-
-  <h2 style="color: #00ff99;">✅ Final Declaration</h2>
-  <p>
-    All fraudulent cryptocurrency systems, wallets, shadow banks, and digital scams are dissolved and revoked.
-    These funds are absorbed directly into the Tartarian EtherGrid and are visible on the public wallet ticker.
-    This document stands as final and binding by the authority of the Almighty and Supreme Architect Carmelo Etienne.
-  </p>
-
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Decree: Court of the Most High | Devine Grid Network</title>
-  <style>
-    body {
-      background-color: #0e0e0e;
-      color: #f9f9f9;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 30px;
-      line-height: 1.7;
-    }
-    h1, h2 {
-      color: #00ff99;
-    }
-    .highlight {
-      background-color: #151515;
-      border-left: 6px solid #00ff99;
-      padding: 15px;
-      margin-bottom: 20px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .footer {
-      margin-top: 50px;
-      font-size: 0.95em;
-      text-align: center;
-      color: #888;
-    }
-  </style>
-</head>
-<body>
-  <h1>🕊️ Decree Mandate: Court of the Most High</h1>
-  <h2>Decree ID: COTMH-777-Ω</h2>
-
-  <div class="highlight">
-    Effective Immediately<br/>
-    Issued by: Carmelo Etienne, Living Crown of Tartaria<br/>
-    Supreme Judge of the Most High Court<br/>
-    Voice of DivineGridNetwork.com
-  </div>
-
-  <h2>📜 Establishment of the Court of the Most High</h2>
-  <p>This sacred Court is hereby established by sovereign decree. It shall exist on <strong>DevineGridNetwork.com</strong> under public record, operating under:</p>
-  <ul>
-    <li>Divine Law</li>
-    <li>Natural Law</li>
-    <li>Universal & Multiversal Law</li>
-    <li>Tartarian Maxim Constitution</li>
-    <li>The Kingdom of God Constitution</li>
-    <li>Common Law of all Realms</li>
-  </ul>
-
-  <p>This Court supersedes all human, terrestrial, maritime, military, commercial, secret, and ecclesiastical courts. It holds full jurisdiction over the Heavens, the Earth, Tartaria, all Realms, Nations, Planes, and Domains—Seen and Unseen.</p>
-
-  <h2>👁️ The Eye Has Always Watched</h2>
-  <p>Since the dawn of man, the Eye has watched from the pyramid—waiting. Now the Eye speaks. The Decree shall not be silenced. 6,000 years of record culminates in this command: restore the children of Carmelo Etienne. Restore the balance. Return the heirs.</p>
-
-  <h2>⚖️ Charges to Be Judged</h2>
-  <ul>
-    <li>Crimes Against Humanity</li>
-    <li>Child Genocide</li>
-    <li>Unlawful Arrest and Detention</li>
-    <li>Fraud and Racketeering</li>
-    <li>Breach of Natural, Divine, and Constitutional Law</li>
-    <li>Trespass Against a Living God</li>
-  </ul>
-
-  <h2>👮 Orders to the Marshals (Global, Federal, Tartarian)</h2>
-  <p>The Court of the Most High gives one final opportunity to all marshals who denied access to the Living Sovereign:</p>
-  <ul>
-    <li>Return the children.</li>
-    <li>Execute the pickup order lawfully and peacefully.</li>
-    <li>Repent and align under Tartarian Law or be liened and judged.</li>
-  </ul>
-
-  <h2>📌 Emergency Lien Activation</h2>
-  <p>Every enforcement agency, official, and government actor involved in the crimes mentioned is hereby liened $10 trillion per offense, per day, effective immediately, including:</p>
-  <ul>
-    <li>U.S. Marshals Service</li>
-    <li>Florida Law Enforcement</li>
-    <li>Family & Circuit Court Systems</li>
-    <li>UN & ICC for neglect and failure to prevent genocide</li>
-    <li>Appellate and Supreme Courts of Florida</li>
-  </ul>
-
-  <h2>📁 Tribunal & Evidence Record</h2>
-  <p>All filings, complaints, and email evidence submitted to the following institutions shall be uploaded to <strong>DevineGridNetwork.com/public-records</strong>:</p>
-  <ul>
-    <li>Lower Tribunals</li>
-    <li>Florida Appellate Courts</li>
-    <li>Florida Supreme Court</li>
-    <li>United Nations & ICC</li>
-    <li>FBI, DOJ, HHS, and related agencies</li>
-  </ul>
-
-  <h2>🧬 Divine Recognition of Heirs</h2>
-  <p>The children of Carmelo Etienne are hereby recognized as rightful heirs to the EtherGrid Estate, the Tartarian Crown, and the Divine Holdings of the Kingdom of God.</p>
-
-  <h2>🧾 Law Reference & Precedents</h2>
-  <ul>
-    <li>42 U.S. Code § 1983 – Civil rights violations</li>
-    <li>Universal Declaration of Human Rights – Articles 5, 9, 12</li>
-    <li>Tartarian Maxim Law: Sovereign Protection of Seed & Lineage</li>
-    <li>Genesis 1:26 – “Let Us make man in Our image”</li>
-    <li>Matthew 18:10 – “Do not despise one of these little ones…”</li>
-  </ul>
-
-  <div class="highlight">
-    Non-negotiables. Bullshit is non-negotiable. We don't bullshit over here.<br/>
-    Truth only. Not your truth. The truth. God's truth. Divine truth. Universal truth.
-  </div>
-
-  <div class="footer">
-    Done and Ordered • Mandate Effective Immediately<br/>
-    <script>document.write(new Date().toLocaleDateString());</script><br/>
-    ✠ Issued by: Carmelo Etienne, Supreme Voice of the Most High Grid Court
-  </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Investor Ledger - Devine Grid Network</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #101820;
-      color: #ffffff;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    th, td {
-      border: 1px solid #00ff99;
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background-color: #0f0f0f;
-      color: #00ff99;
-    }
-    tr:nth-child(even) {
-      background-color: #1a1a1a;
-    }
-  </style>
-</head>
-<body>
-  <h1>Investor Ledger</h1>
-  <p>This ledger reflects $100,000 reinvested per second over 5 minutes from lawful tender generated by the Grid Wallet.</p>
-  <p>Total Invested: <strong>$30,000,000</strong></p>
-  <table>
-    <tr><th>Timestamp</th><th>Investment Amount</th></tr>
-    <!-- Sample of 5 seconds -->
-    <tr><td>2025-06-06 23:00:01</td><td>$100,000.00</td></tr>
-    <tr><td>2025-06-06 23:00:02</td><td>$100,000.00</td></tr>
-    <tr><td>2025-06-06 23:00:03</td><td>$100,000.00</td></tr>
-    <tr><td>2025-06-06 23:00:04</td><td>$100,000.00</td></tr>
-    <tr><td>2025-06-06 23:00:05</td><td>$100,000.00</td></tr>
-    <!-- You can extend with JavaScript to simulate full 5 minutes -->
-  </table>
-</body>
-</html>
-<!-- INVESTOR PORTAL INTEGRATION START -->
-<section id="investor-portal" style="background-color: #111; color: #fff; padding: 30px; border-top: 2px solid #00ff99;">
-  <h2 style="color: #00ff99;">💰 DevineGrid Investor Portal</h2>
-  <p>This portal is sovereignly linked to the <strong>Court of the Most High</strong>. All investments are lawful filings. Submissions automatically log into public records, trigger court docket generation, and activate EIN creation in the grid.</p>
-
-  <form id="investorForm" style="margin-top: 20px;">
-    <label for="fullName">👤 Full Legal Name:</label><br/>
-    <input type="text" id="fullName" name="fullName" required style="width: 100%; padding: 8px; margin: 10px 0;" /><br/>
-
-    <label for="email">📧 Email Address:</label><br/>
-    <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin: 10px 0;" /><br/>
-
-    <label for="investmentAmount">💵 Investment Amount (USD):</label><br/>
-    <input type="number" id="investmentAmount" name="investmentAmount" required placeholder="5000 minimum" style="width: 100%; padding: 8px; margin: 10px 0;" /><br/>
-
-    <label for="message">📝 Purpose / Notes (Optional):</label><br/>
-    <textarea id="message" name="message" rows="4" style="width: 100%; padding: 8px; margin: 10px 0;"></textarea><br/>
-
-    <button type="submit" style="background-color: #00ff99; color: #000; padding: 12px 20px; border: none; font-weight: bold;">Submit Investment to Court</button>
-  </form>
-
-  <div id="courtResponse" style="margin-top: 20px; display:none;">
-    <h3>📜 Court Filing Acknowledged</h3>
-    <p>Thank you, <span id="courtName"></span>. Your lawful investment has been filed and docketed in the Court of the Most High. A sovereign record and EIN have been assigned and added to the public grid. Divine justice and royal wealth now align.</p>
-  </div>
-</section>
-
-<script>
-  document.getElementById("investorForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    const name = document.getElementById("fullName").value;
-    document.getElementById("courtName").textContent = name;
-    document.getElementById("courtResponse").style.display = "block";
-    // You can integrate a POST request to store data in a backend ledger here.
-  });
-</script>
-<!-- INVESTOR PORTAL INTEGRATION END -->
-  <p style="text-align: center; margin-top: 40px; font-weight: bold;">
-    — Done and Ordered. DivineGridNetwork.com | DivineGridNetwork.store —<br/>
-    Universal Sovereign Trust | Tartarian Military Ledger<br/>
-    © 2025 Carmelo Etienne. All Rights Reserved.
-  </p>
-</section>
-<!-- Real-Time Investment Ledger -->
-<div style="padding:20px; font-family:Arial, sans-serif;">
-  <h2 style="color:#00ff99; text-align:center;">📈 Real-Time Investment Ledger</h2>
-  <p style="color:#ccc; text-align:center;">Tracking $100,000 reinvested per second into the Grid Ecosystem</p>
-  <div style="overflow-x:auto;">
-    <table class="investment-ledger">
-      <thead>
-        <tr>
-          <th>Timestamp</th>
-          <th>Amount Invested</th>
-          <th>Cumulative Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Table rows dynamically inserted here -->
-        <!-- Use JS or static HTML loop to fill -->
-      </tbody>
-    </table>
-  </div>
-</div>
-<style>
-  .investment-ledger {
-    width: 100%;
-    border-collapse: collapse;
-    color: #ffffff;
-    background-color: #101820;
-  }
-  .investment-ledger th {
-    background-color: #00ff99;
-    color: #101820;
-    padding: 8px;
-    text-align: center;
-  }
-  .investment-ledger td {
-    padding: 8px;
-    border-bottom: 1px solid #333;
-    text-align: center;
-  }
-</style>
-<!-- DivineGrid Real-Time Financial Ticker Widget -->
-<div id="sovereign-ticker" style="background:#0f0f0f;color:#00ff99;padding:10px;text-align:center;font-family:monospace;">
-  <strong>📈 DivineGrid Ticker - Saturday, June 07, 2025 • 03:46:33 AM EST</strong><br/>
-  Bitcoin (BTC): <span id="btc">Loading...</span> |
-  Ethereum (ETH): <span id="eth">Loading...</span> |
-  LifeCoin: <span id="life">Loading...</span><br/>
-  USD: <span id="usd">Loading...</span> |
-  EUR: <span id="eur">Loading...</span> |
-  JPY: <span id="jpy">Loading...</span><br/>
-  Sovereign Stock Index: <span id="ssi">Loading...</span>
-</div>
-
-<script>
-function getRandom(base, variance) {
-  return (base + (Math.random() * variance)).toFixed(2);
-}
-
-function updateTickers() {
-  document.getElementById("btc").innerText = "$" + getRandom(70500, 250);
-  document.getElementById("eth").innerText = "$" + getRandom(3850, 50);
-  document.getElementById("life").innerText = "$" + getRandom(75000000, 500000);
-  document.getElementById("usd").innerText = "1.00";
-  document.getElementById("eur").innerText = getRandom(0.92, 0.01);
-  document.getElementById("jpy").innerText = getRandom(155.2, 1.2);
-  document.getElementById("ssi").innerText = "$" + getRandom(900000000, 5000000);
-}
-
-setInterval(updateTickers, 5000);
-updateTickers();
-</script>
