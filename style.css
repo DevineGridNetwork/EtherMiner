@@ -1,54 +1,36 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f4f4;
-  color: #1B3A4B;
+body.marble-bg {
+    background: #000 url('https://www.transparenttextures.com/patterns/marble.png');
+    color: white;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
 }
-header {
-  background-color: #1B3A4B;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-nav {
-  background: #00C853;
-  display: flex;
-  justify-content: space-around;
-  padding: 0.5rem;
+header, footer {
+    background: black;
+    text-align: center;
+    padding: 1em;
 }
 nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+    margin: 0 15px;
+    color: gold;
+    text-decoration: none;
 }
-.wallet {
-  text-align: center;
-  padding: 2rem;
-  background: #fff;
-  margin: 1rem;
-  border-radius: 8px;
+main {
+    padding: 2em;
 }
-.ticker {
-  display: flex;
-  justify-content: space-around;
-  background: #111;
-  color: #0f0;
-  padding: 1rem;
-  font-family: monospace;
+aside {
+    float: left;
+    width: 20%;
+    background: #111;
+    padding: 1em;
 }
-.section {
-  background: #fff;
-  margin: 1rem;
-  padding: 2rem;
-  border-radius: 8px;
+section {
+    margin-left: 22%;
+    background: #222;
+    padding: 1em;
 }
-.admin-login {
-  display: none;
-}
-footer {
-  text-align: center;
-  background: #1B3A4B;
-  color: white;
-  padding: 1rem;
-  margin-top: 2rem;
+.ticker, .wallet, .record-table {
+    border: 1px solid gold;
+    padding: 1em;
+    margin: 1em 0;
 }
