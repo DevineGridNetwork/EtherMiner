@@ -1,38 +1,59 @@
 body {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: white;
+  color: black;
   font-family: 'Georgia', serif;
   margin: 0;
   padding: 0;
 }
-
-header, footer {
-  background-color: #f0f0f0;
-  padding: 10px;
+header {
+  background: #014421; /* Money green */
+  color: white;
+  padding: 20px;
   text-align: center;
 }
-
-nav ul {
-  list-style: none;
-  padding: 0;
+header h1 {
   margin: 0;
+  font-size: 2em;
 }
-
-nav ul li {
-  display: inline;
-  margin: 0 15px;
+header p {
+  margin-top: 5px;
+  font-size: 1.1em;
 }
-
-a {
-  color: #0000cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-section {
+main {
   padding: 20px;
+}
+.wallet-box, .ticker-box, section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #fdfdfd;
+  max-width: 960px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+ul {
   line-height: 1.6;
+}
+footer {
+  background: #014421;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 12px;
+}
+.ticker-live {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #014421;
+}
+.wallet-id {
+  font-family: monospace;
+  font-size: 0.9em;
+  color: #333;
 }
