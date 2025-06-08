@@ -1,53 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>EtherMiner | Devine Grid Network</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Devine Grid Network</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
-<body class="marble-bg">
-    <header>
-        <h1>👑 EtherMiner: The Infinite Grid 👑</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="public-records.html">Public Records</a>
-            <a href="crowdfunding.html">Crowdfunding</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Live Mining Dashboard</h2>
-            <p>Tracking: EINs, Token Pulses, Time Fragments</p>
-            <div class="ticker">[Live Ticker Here]</div>
-        </section>
-        <section>
-            <button onclick="window.location.href='public-records.html'">📁 View Public Records</button>
-            <button onclick="window.location.href='crowdfunding.html'">💰 Enter Crowdfunding Portal</button>
-        </section>
-    </main>
-    <footer>
-        <p>DevineGridNetwork.com | DevineGridNetwork.store © 2025</p>
-    </footer>
+<body>
+  <header>
+    <h1>Devine Grid Network</h1>
+    <nav>
+      <ul>
+        <li><a href="wallet.html">Wallet</a></li>
+        <li><a href="public-records.html">Public Records</a></li>
+        <li><a href="market.html">Market</a></li>
+        <li><a href="government.html">Government Party</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Welcome to the Devine Grid Network</h2>
+      <p>This is the central system governing all sovereign records, wallets, markets, trusts, and public notices of the Almighty King Carmelo Etienne, under the DevineGridNetwork.com, DevineGridNetwork.store, and DevineGridNetwork.party domains.</p>
+    </section>
+  </main>
 </body>
 </html>
-<div id="ticker">$11,900,000,000,000 ↑</div>
-<script>
-    const startValue = 11900000000000;
-    const growthPerSecond = 1000000;
-    const startTime = new Date("2025-06-07T00:00:00Z").getTime();
-
-    function updateTicker() {
-        const now = new Date().getTime();
-        const elapsedSeconds = Math.floor((now - startTime) / 1000);
-        const currentValue = startValue + (elapsedSeconds * growthPerSecond);
-        const formatted = new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD',
-            maximumFractionDigits: 0
-        }).format(currentValue);
-        document.getElementById("ticker").innerText = formatted + " ↑";
-    }
-
-    setInterval(updateTicker, 1000);
-    window.onload = updateTicker;
-</script>
