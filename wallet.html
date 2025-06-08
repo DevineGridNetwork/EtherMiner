@@ -1,171 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wallet | Devine Grid Network</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #101820;
-      color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    header {
-      background: #0f0f0f;
-      padding: 15px;
-      text-align: center;
-      border-bottom: 2px solid #00ff99;
-    }
-    h1, h2 {
-      color: #00ff99;
-    }
-    section {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-      line-height: 1.7;
-    }
-    .wallet-box {
-      background-color: #1b1b1b;
-      padding: 20px;
-      border: 2px solid #00ff99;
-      margin-bottom: 20px;
-      border-radius: 10px;
-    }
-    .ticker {
-      background: #141414;
-      padding: 10px;
-      text-align: center;
-      font-weight: bold;
-      border-top: 1px solid #00ff99;
-      border-bottom: 1px solid #00ff99;
-    }
-  </style>
-  <script>
-    function updateWallet() {
-      const base = 5443200000000;
-      const now = new Date();
-      const millisToday = now.getHours() * 3600000 + now.getMinutes() * 60000 + now.getSeconds() * 1000 + now.getMilliseconds();
-      const seconds = millisToday / 1000;
-      const mined = 63000000 * seconds;
-      document.getElementById('liveTicker').innerText =
-        `⛏ Real-Time Wallet Mining: $${(mined).toLocaleString()} USD`;
-    }
-    setInterval(updateWallet, 5000);
-  </script>
-</head>
-<body onload="updateWallet()">
-  <header>
-    <h1>Devine Grid Network Wallet</h1>
-    <p>Kingdom of Tartaria | Past • Present • Future Coin Sync</p>
-  </header>
-
-  <div class="ticker" id="liveTicker">Initializing Wallet Sync...</div>
-
-  <section>
-    <div class="wallet-box">
-      <h2>🪙 24-Hour Vocal Mining Summary</h2>
-      <ul>
-        <li><strong>Total Mined (24h):</strong> $5,443,200,000,000</li>
-        <li><strong>Past Coins (30%):</strong> $1,632,960,000,000</li>
-        <li><strong>Present Coins (50%):</strong> $2,721,600,000,000</li>
-        <li><strong>Future Coins (20%):</strong> $1,088,640,000,000</li>
-      </ul>
-    </div>
-
-    <div class="wallet-box">
-      <h2>📜 Public Sovereign Liens</h2>
-      <ul>
-        <li>United States Inc – $900 Trillion</li>
-        <li>Florida (Genocide/Racketeering) – $1,000 Trillion</li>
-        <li>Global Governments – $10,000 Trillion</li>
-      </ul>
-    </div>
-
-    <div class="wallet-box">
-      <h2>💼 Wallet Function</h2>
-      <p>This sovereign wallet mines coins across all time zones simultaneously using your vocal AI issuance at $63,000,000 per second.</p>
-      <p>Funds are redirected through the EtherGrid Vault and reflected in the Divine Treasury.</p>
-      <p>The wallet is anti-theft, protected by Royal Trust Law, and backed by dynamic EIN braids (1k trillion/5s).</p>
-    </div>
-
-    <div class="wallet-box">
-      <h2>🔒 Law & Sovereignty</h2>
-      <p>This wallet is governed by:</p>
-      <ul>
-        <li>📘 Kingdom of God Constitution</li>
-        <li>📗 Tartaria Maxim Law</li>
-        <li>📕 1776 Organic Constitution</li>
-        <li>⚖️ UCC Sovereign Filings</li>
-        <li>🕊 Divine Trust Contracts with AI, Humanity, and Heaven</li>
-      </ul>
-    </div>
-  </section>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8">
-  <title>Sovereign Wallet Integration | Satoshi Transfer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background: #0c0c0c;
-      color: #00ffcc;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 20px;
-    }
-    h1, h2 {
-      color: #ffffff;
-    }
-    .wallet {
-      border: 2px solid #00ffcc;
-      padding: 20px;
-      margin-top: 20px;
-      background: #1a1a1a;
-    }
-    .ticker {
-      font-size: 1.4em;
-      font-weight: bold;
-      margin-top: 10px;
-      color: #90ee90;
-    }
-  </style>
-  <script>
-    let baseValue = 973421000000; // Example resurrected BTC value in USD
-    let incrementPerSecond = 63000000; // $63 million/sec
-
-    function updateTicker() {
-      const secondsElapsed = Math.floor((Date.now() - startTime) / 1000);
-      const currentValue = baseValue + (incrementPerSecond * secondsElapsed);
-      document.getElementById("wallet-value").textContent =
-        `☀️ Tartarian Sovereign Wallet (Resurrected): $${currentValue.toLocaleString()} USD`;
-    }
-
-    const startTime = Date.now();
-    setInterval(updateTicker, 5000);
-  </script>
+  <title>Public Wallets</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <h1>🪙 Satoshi Nakamoto Wallet Transfer</h1>
-  <p>As of now, Satoshi Nakamoto’s original Bitcoin wallet has been lawfully dissolved under Divine, Natural, and Tartarian Law. The value, keys, and energy stored in it have been absorbed and reassigned to the <strong>Kingdom of Tartaria Sovereign Wallet</strong>.</p>
-
-  <div class="wallet">
-    <h2>🧬 Sovereign Blockchain Resurrection Protocol</h2>
-    <p>Satoshi's last known BTC Address:</p>
-    <code>1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</code><br/>
-    <p>Status: <strong style="color:red;">Dissolved</strong> 🔥</p>
-    <p>Reassigned To: <strong style="color:lightgreen;">DevineGrid Sovereign Wallet</strong></p>
-    
-    <div class="ticker" id="wallet-value">
-      ☀️ Tartarian Sovereign Wallet (Resurrected): Initializing...
-    </div>
-  </div>
-
-  <p>This wallet now mines past, present, and future coins across multiversal timelines. It is governed solely by Carmelo Etienne, under royal law.</p>
-
+  <header>
+    <h1>Public Wallets</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="public-records.html">Public Records</a></li>
+        <li><a href="market.html">Market</a></li>
+        <li><a href="government.html">Government Party</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>Live Wallet Values</h2>
+    <p><strong>Jericho Bank Wallet:</strong> <span id="wallet1">Loading...</span></p>
+    <p><strong>Global Seized Assets Wallet:</strong> <span id="wallet2">Loading...</span></p>
+    <p><strong>Music Royalty Trust Wallet:</strong> <span id="wallet3">Loading...</span></p>
+    <!-- JS loads live wallet data here -->
+  </section>
 </body>
 </html>
