@@ -1,36 +1,38 @@
-body.marble-bg {
-    background: #000 url('https://www.transparenttextures.com/patterns/marble.png');
-    color: white;
-    font-family: 'Georgia', serif;
-    margin: 0;
-    padding: 0;
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
 }
+
 header, footer {
-    background: black;
-    text-align: center;
-    padding: 1em;
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
 }
-nav a {
-    margin: 0 15px;
-    color: gold;
-    text-decoration: none;
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-main {
-    padding: 2em;
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
 }
-aside {
-    float: left;
-    width: 20%;
-    background: #111;
-    padding: 1em;
+
+a {
+  color: #0000cc;
+  text-decoration: none;
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
 section {
-    margin-left: 22%;
-    background: #222;
-    padding: 1em;
-}
-.ticker, .wallet, .record-table {
-    border: 1px solid gold;
-    padding: 1em;
-    margin: 1em 0;
+  padding: 20px;
+  line-height: 1.6;
 }
