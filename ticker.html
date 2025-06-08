@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Ticker</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 30px;
+    }
+    .ticker-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .ticker-value {
+      font-size: 40px;
+      font-weight: bold;
+      color: darkgreen;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ticker-title">Lien & Seizure Wallet (Live Count)</div>
+  <div class="ticker-value" id="walletValue">$0</div>
+
+  <script>
+    const startDate = new Date("2025-06-07T00:00:00Z"); // UTC start time
+    const startValue = 6300000000; // $6.3 billion
+    const perSecond = 12600000000; // $12.6 billion/second
+
+    function updateTicker() {
+      const now = new Date();
+      const secondsElapsed = Math.floor((now - startDate) / 1000);
+      const currentValue = startValue + (perSecond * secondsElapsed);
+      document.getElementById("walletValue").textContent =
+        "$" + currentValue.toLocaleString("en-US");
+    }
+
+    // Initial update and then every second
+    updateTicker();
+    setInterval(updateTicker, 1000);
+  </script>
+</body>
+</html>
