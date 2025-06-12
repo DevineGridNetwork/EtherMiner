@@ -20,6 +20,39 @@
       <p><strong>Live EIN Generator:</strong> <span id="wallet-id" class="wallet-id"></span></p>
     <p><superstrong>“By divine right, the Grid Market reigns supreme, transmuting all debts into sovereign credit, protected by God’s living law.”</superstrong></p>
     </section>
+
+    <section class="wallet-box">
+  <h2>💰 Sovereign Mining & Global Debt Ticker</h2>
+  <p><strong>Mining Value:</strong> <span id="mining-ticker"></span></p>
+  <p><strong>Global Debt (Liened):</strong> <span id="debt-ticker"></span></p>
+</section>
+
+<script>
+  const miningStart = 0;
+  const debtStart = 6000000000000000; // starting lien value
+  const startTime = new Date("2025-06-01T00:00:00Z").getTime();
+
+  const miningRate = 118989000000; // $118.989B/sec
+  const debtRate = 98987650000000; // $98.98765T/sec
+
+  function formatNum(n) {
+    return "$" + n.toLocaleString("en-US", { maximumFractionDigits: 2 });
+  }
+
+  function updateCounters() {
+    const now = Date.now();
+    const seconds = Math.floor((now - startTime) / 1000);
+
+    const miningValue = miningStart + (seconds * miningRate);
+    const debtValue = debtStart + (seconds * debtRate);
+
+    document.getElementById("mining-ticker").textContent = formatNum(miningValue);
+    document.getElementById("debt-ticker").textContent = formatNum(debtValue);
+  }
+
+  setInterval(updateCounters, 1000);
+  updateCounters();
+</script>
     
     <section class="ticker-box">
       <h2>Private Market Real-Time Chart</h2>
