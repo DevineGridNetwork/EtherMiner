@@ -4,40 +4,33 @@
   <meta charset="UTF-8">
   <title>Sonic Boom Ticker</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       background: transparent;
       font-family: Arial, sans-serif;
       color: #000;
-      font-weight: bold;
       font-size: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-    }
-    .ticker {
-      animation: pulse 4s infinite;
-    }
-    @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.85; }
-      100% { opacity: 1; }
+      font-weight: bold;
+      text-align: center;
+      line-height: 60px;
+      height: 60px;
     }
   </style>
 </head>
 <body>
-  <div class="ticker" id="boomTicker">
-    Sonic Boom Cash: $1,500,000.00 • Supply: 1,000 • Market Cap: $1.5B
-  </div>
+  <div id="ticker">Sonic Boom Cash: $1,500,000.00 • Supply: 1,000 • Market Cap: $1.5B</div>
 
   <script>
     let value = 1500000;
-    const el = document.getElementById('boomTicker');
+    const ticker = document.getElementById('ticker');
+
     setInterval(() => {
-      const delta = (Math.random() - 0.5) * 1000; // simulate movement
-      value = Math.max(1500000, value + delta);
-      el.innerText = `Sonic Boom Cash: $${value.toLocaleString(undefined, {minimumFractionDigits: 2})} • Supply: 1,000 • Market Cap: $${(value * 1000 / 1e9).toFixed(2)}B`;
+      const change = (Math.random() - 0.5) * 500;
+      value = Math.max(1500000, value + change);
+      const formatted = `$${value.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
+      const marketCap = `$${((value * 1000) / 1e9).toFixed(2)}B`;
+      ticker.textContent = `Sonic Boom Cash: ${formatted} • Supply: 1,000 • Market Cap: ${marketCap}`;
     }, 4000);
   </script>
 </body>
