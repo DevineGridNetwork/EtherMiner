@@ -2,23 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sonic Boom Cash Ticker</title>
+  <title>Sonic Boom Ticker</title>
   <style>
     body {
       margin: 0;
-      font-family: Helvetica, Arial, sans-serif;
       background: transparent;
-      color: black;
-      font-size: 18px;
+      font-family: Arial, sans-serif;
+      color: #000;
       font-weight: bold;
+      font-size: 18px;
       display: flex;
-      align-items: center;
       justify-content: center;
-      height: 60px;
+      align-items: center;
+      height: 100%;
+    }
+    .ticker {
+      animation: pulse 4s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.85; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
 <body>
-  💥 Sonic Boom Cash – $1,500,000.00 | Market Cap: $1.5B | Supply: 1,000 Coins
+  <div class="ticker" id="boomTicker">
+    Sonic Boom Cash: $1,500,000.00 • Supply: 1,000 • Market Cap: $1.5B
+  </div>
+
+  <script>
+    let value = 1500000;
+    const el = document.getElementById('boomTicker');
+    setInterval(() => {
+      const delta = (Math.random() - 0.5) * 1000; // simulate movement
+      value = Math.max(1500000, value + delta);
+      el.innerText = `Sonic Boom Cash: $${value.toLocaleString(undefined, {minimumFractionDigits: 2})} • Supply: 1,000 • Market Cap: $${(value * 1000 / 1e9).toFixed(2)}B`;
+    }, 4000);
+  </script>
 </body>
 </html>
